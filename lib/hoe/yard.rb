@@ -188,7 +188,7 @@ module Hoe::Yard
     opts = self.yard_opts + ['--title', self.yard_title]
 
     if self.yard_markup
-      opts += ['--markup', self.yard_markup]
+      opts += ['--markup', self.yard_markup.to_s]
     end
 
     if self.yard_markup_provider
