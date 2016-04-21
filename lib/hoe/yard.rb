@@ -49,8 +49,8 @@ module Hoe::Yard
     self.yard_options = []
 
     # find the README.* and History.* files
-    self.readme_file = intuit_file_name(File.basename(self.readme_file))
-    self.history_file = intuit_file_name(File.basename(self.history_file))
+    self.readme_file ||= intuit_file_name(File.basename(self.readme_file))
+    self.history_file ||= intuit_file_name(File.basename(self.history_file))
 
     # disable RDoc and ri tasks
     self.need_rdoc = false
